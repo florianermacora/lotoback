@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="01" author="FER">
+        <createTable tableName="tirage">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" unique="true" primaryKey="true"/>
+            </column>
+            <column name="num1" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="num2" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="num3" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="num4" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="num5" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_tirage" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
