@@ -3,55 +3,50 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <changeSet id="01" author="FER">
-        <createTable tableName="tirage_prem">
+    <changeSet id="02" author="FER">
+        <createTable tableName="statistique_prem">
             <column name="id" type="int" autoIncrement="true">
                 <constraints nullable="false" unique="true" primaryKey="true"/>
             </column>
-            <column name="num1" type="int">
+            <column name="numero" type="int">
                 <constraints nullable="false"/>
             </column>
-            <column name="num2" type="int">
+            <column name="principal" type="boolean">
                 <constraints nullable="false"/>
             </column>
-            <column name="num3" type="int">
-                <constraints nullable="false"/>
+            <column name="nb_sortie" type="int">
+                <constraints nullable="true"/>
             </column>
-            <column name="num4" type="int">
-                <constraints nullable="false"/>
+            <column name="annonce" type="int">
+                <constraints nullable="true"/>
             </column>
-            <column name="num5" type="int">
-                <constraints nullable="false"/>
+            <column name="ecart" type="int">
+                <constraints nullable="true"/>
             </column>
-            <column name="num_comp" type="int">
-                <constraints nullable="false"/>
-            </column>
+
             <column name="date_tirage" type="date">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
         </createTable>
 
-        <createTable tableName="tirage_sec">
+        <createTable tableName="statistique_sec">
             <column name="id" type="int" autoIncrement="true">
                 <constraints nullable="false" unique="true" primaryKey="true"/>
             </column>
-            <column name="num1" type="int">
+            <column name="numero" type="int">
                 <constraints nullable="false"/>
             </column>
-            <column name="num2" type="int">
-                <constraints nullable="false"/>
+            <column name="nb_sortie" type="int">
+                <constraints nullable="true"/>
             </column>
-            <column name="num3" type="int">
-                <constraints nullable="false"/>
+            <column name="annonce" type="int">
+                <constraints nullable="true"/>
             </column>
-            <column name="num4" type="int">
-                <constraints nullable="false"/>
-            </column>
-            <column name="num5" type="int">
-                <constraints nullable="false"/>
+            <column name="ecart" type="int">
+                <constraints nullable="true"/>
             </column>
             <column name="date_tirage" type="date">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
         </createTable>
     </changeSet>

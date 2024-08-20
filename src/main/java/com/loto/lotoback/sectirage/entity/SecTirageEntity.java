@@ -1,4 +1,4 @@
-package com.loto.lotoback.tirage.entity;
+package com.loto.lotoback.sectirage.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,16 +9,16 @@ import lombok.Setter;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "tirage")
+@Table(name = "tirage_sec")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class TirageEntity {
+public class SecTirageEntity {
 
     @Column(name = "id")
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "num1")
@@ -39,7 +39,7 @@ public class TirageEntity {
     @Column(name = "date_tirage")
     private LocalDate dateTirage;
 
-    public TirageEntity(Integer num1, Integer num2, Integer num3, Integer num4, Integer num5, LocalDate dateTirage) {
+    public SecTirageEntity(Integer num1, Integer num2, Integer num3, Integer num4, Integer num5, LocalDate dateTirage) {
         this.num1 = num1;
         this.num2 = num2;
         this.num3 = num3;

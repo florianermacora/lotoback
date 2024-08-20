@@ -1,78 +1,85 @@
 package com.loto.lotoback.file.service;
 
 
-import com.loto.lotoback.tirage.entity.TirageEntity;
-import com.loto.lotoback.tirage.repository.TirageRepository;
+import com.loto.lotoback.premtirage.entity.PremTirageEntity;
+import com.loto.lotoback.premtirage.service.PremTirageService;
+import com.loto.lotoback.sectirage.entity.SecTirageEntity;
+import com.loto.lotoback.sectirage.service.SecTirageService;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static com.loto.lotoback.file.enums.HeaderCsvNameEnum.*;
+
 @Service
 public class FileService {
 
-    public final TirageRepository tirageRepository;
+    public final PremTirageService premTirageService;
+    public final SecTirageService secTirageService;
 
-    public FileService(TirageRepository tirageRepository) {
-        this.tirageRepository = tirageRepository;
+    public FileService(PremTirageService premTirageService, SecTirageService secTirageService) {
+        this.premTirageService = premTirageService;
+        this.secTirageService = secTirageService;
     }
 
     public boolean hasCsvFormat(MultipartFile file) {
-        if ("text/csv".equals(file.getContentType())) {
-            return true;
-        }
-        return false;
+        return "text/csv".equals(file.getContentType());
     }
 
     public void processAndSaveData(MultipartFile file) {
-        List<TirageEntity> lotoDataList = new ArrayList<>();
+
         try {
-            lotoDataList = csvToData(file.getInputStream());
+            csvToData(file.getInputStream());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        tirageRepository.saveAll(lotoDataList);
-
     }
 
-    private List<TirageEntity> csvToData(InputStream inputStream) {
-        List<TirageEntity> tirageList = new ArrayList<>();
+    private void csvToData(InputStream inputStream) {
+        List<PremTirageEntity> tirageList1 = new ArrayList<>();
+        List<SecTirageEntity> tirageList2 = new ArrayList<>();
         try {
-            BufferedReader fileReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
+            BufferedReader fileReader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
             CSVParser csvParser =
                     new CSVParser(fileReader, CSVFormat.EXCEL.withFirstRecordAsHeader().withDelimiter(';').withTrim());
             List<CSVRecord> records = csvParser.getRecords();
 
             for (CSVRecord record : records) {
-                List<Integer> sortListTirage1 = this.getDataToSortArray(record, "boule_1", "boule_2",
-                        "boule_3", "boule_4", "boule_5");
-                TirageEntity tirage =
-                        new TirageEntity(sortListTirage1.get(0), sortListTirage1.get(1), sortListTirage1.get(2), sortListTirage1.get(3), sortListTirage1.get(4),
-                                LocalDate.parse(record.get("date_de_tirage"), DateTimeFormatter.ofPattern("dd/MM/yyyy")));
-                tirageList.add(tirage);
+                LocalDate localDate = LocalDate.parse(record.get(DATE_TIRAGE.getNameBoule()), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                List<Integer> sortListTirage1 = this.getDataToSortArray(record, BOULE1.getNameBoule(), BOULE2.getNameBoule(),
+                        BOULE3.getNameBoule(), BOULE4.getNameBoule(), BOULE5.getNameBoule(), BOULECOMP.getNameBoule());
+                PremTirageEntity tirage =
+                        new PremTirageEntity(sortListTirage1.get(0), sortListTirage1.get(1), sortListTirage1.get(2),
+                                sortListTirage1.get(3), sortListTirage1.get(4), sortListTirage1.get(5), localDate);
+                tirageList1.add(tirage);
 
-                List<Integer> sortListTirage2 = this.getDataToSortArray(record, "boule_1_second_tirage", "boule_2_second_tirage",
-                        "boule_3_second_tirage", "boule_4_second_tirage", "boule_5_second_tirage");
-                TirageEntity tirage2 =
-                        new TirageEntity(sortListTirage2.get(0), sortListTirage2.get(1), sortListTirage2.get(2), sortListTirage2.get(3), sortListTirage2.get(4),
-                                LocalDate.parse(record.get("date_de_tirage"), DateTimeFormatter.ofPattern("dd/MM/yyyy")));
-                tirageList.add(tirage2);
+                List<Integer> sortListTirage2 = this.getDataToSortArray(record, BOULE1_2.getNameBoule(), BOULE2_2.getNameBoule(),
+                        BOULE3_2.getNameBoule(), BOULE4_2.getNameBoule(), BOULE5_2.getNameBoule());
+                SecTirageEntity tirage2 =
+                        new SecTirageEntity(sortListTirage2.get(0), sortListTirage2.get(1), sortListTirage2.get(2),
+                                sortListTirage2.get(3), sortListTirage2.get(4), localDate);
+
+                tirageList2.add(tirage2);
             }
-        } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return tirageList;
+        this.premTirageService.saveTiragesList(tirageList1);
+        this.secTirageService.saveTiragesList(tirageList2);
     }
 
     private List<Integer> getDataToSortArray(CSVRecord record, String data1, String data2, String data3, String data4, String data5) {
@@ -83,6 +90,12 @@ public class FileService {
         sortArray.add(Integer.parseInt(record.get(data4)));
         sortArray.add(Integer.parseInt(record.get(data5)));
         Collections.sort(sortArray);
+        return sortArray;
+    }
+
+    private List<Integer> getDataToSortArray(CSVRecord record, String data1, String data2, String data3, String data4, String data5, String data6) {
+        List<Integer> sortArray = getDataToSortArray(record, data1, data2, data3, data4, data5);
+        sortArray.add(Integer.parseInt(record.get(data6)));
         return sortArray;
     }
 }

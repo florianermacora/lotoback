@@ -1,3 +1,7 @@
 databaseChangeLog:
   - include:
       file: classpath:/db/changelog/create-tirage-table.xml
+  - include:
+      file: classpath:/db/changelog/create-statistique-table.xml
+  - include:
+      file: classpath:/db/changelog/insert-statisque.xml

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="03" author="FER">
+        <comment>Inserting statistique</comment>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="1"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="2"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="3"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="4"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="5"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="6"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="7"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="8"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="9"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="10"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="11"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="12"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="13"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="14"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="15"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="16"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="17"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="18"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="19"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="20"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="21"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="22"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="23"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="24"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="25"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="26"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="27"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="28"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="29"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="30"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="31"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="32"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="33"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="34"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="35"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="36"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="37"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="38"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="39"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="40"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="41"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="42"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="43"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="44"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="45"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="46"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="47"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="48"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="49"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="1"/>
+            <column name="principal" valueBoolean="false"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="2"/>
+            <column name="principal" valueBoolean="false"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="3"/>
+            <column name="principal" valueBoolean="false"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="4"/>
+            <column name="principal" valueBoolean="false"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="5"/>
+            <column name="principal" valueBoolean="false"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="6"/>
+            <column name="principal" valueBoolean="false"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="7"/>
+            <column name="principal" valueBoolean="false"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="8"/>
+            <column name="principal" valueBoolean="false"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="9"/>
+            <column name="principal" valueBoolean="false"/>
+        </insert>
+        <insert tableName="statistique_prem">
+            <column name="numero" valueNumeric="10"/>
+            <column name="principal" valueBoolean="false"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="04" author="FER">
+        <comment>Inserting statistique</comment>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="1"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="2"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="3"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="4"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="5"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="6"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="7"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="8"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="9"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="10"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="11"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="12"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="13"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="14"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="15"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="16"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="17"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="18"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="19"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="20"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="21"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="22"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="23"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="24"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="25"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="26"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="27"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="28"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="29"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="30"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="31"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="32"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="33"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="34"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="35"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="36"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="37"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="38"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="39"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="40"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="41"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="42"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="43"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="44"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="45"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="46"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="47"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="48"/>
+        </insert>
+        <insert tableName="statistique_sec">
+            <column name="numero" valueNumeric="49"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
